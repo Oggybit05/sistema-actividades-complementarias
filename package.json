@@ -1,0 +1,42 @@
+{
+  "name": "sistema-complementarias",
+  "version": "1.0.0",
+  "description": "Sistema de Actividades Complementarias",
+  "main": "dist-electron/main/main.js",
+  "scripts": {
+    "dev": "concurrently -k \"npm run dev:vite\" \"npm run dev:electron\"",
+    "dev:vite": "vite",
+    "dev:electron": "tsc -p tsconfig.main.json && wait-on http://localhost:5173 && electron .",
+    "build": "npm run build:vite && npm run build:electron",
+    "build:vite": "tsc -p tsconfig.renderer.json && vite build",
+    "build:electron": "tsc -p tsconfig.main.json",
+    "dist": "npm run build && electron-builder --config electron-builder.config.js",
+    "dist:win": "npm run build && electron-builder --win --config electron-builder.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^20.14.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/sql.js": "^1.4.11",
+    "@vitejs/plugin-react": "^4.3.1",
+    "concurrently": "^8.2.2",
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3",
+    "typescript": "^5.4.5",
+    "vite": "^5.3.1",
+    "wait-on": "^7.2.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "exceljs": "^4.4.0",
+    "pdf-parse": "^2.4.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.24.0",
+    "sql.js": "^1.12.0"
+  }
+}

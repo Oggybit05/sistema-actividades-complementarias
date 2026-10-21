@@ -1,0 +1,26 @@
+node_modules/
+dist/
+dist-electron/
+release/
+*.db
+*.db.bak
+.env
+
+# Scripts y volcados temporales de depuración
+_*.js
+_*.py
+_*.log
+_asar_check/
+
+# Documentos originales de la maestra (listas, reportes oficiales):
+# son datos reales de alumnos, no forman parte del código del sistema.
+Lista inter
+ListasAsistenciaComp.aspx.pdf
+ListasAsistenciaComp.pdf
+Reporte Final AC 2026-1 RIPOLL.xlsx
+Yoga 1 Calificaciones.pdf
+Yoga 1lista.pdf
+listasinteligencia.pdf
+yoga 2.pdf
+3
+
